@@ -124,12 +124,36 @@
 // content2.innerHTML = textHtml; // แสดงผลลัพธ์ใน html
 //=====================================================================================================
 
-let discountButton = document.getElementById('discountButton'); // กำหนดค่าให้ตัวแปร discountButton
-let message = document.getElementById('message'); // กำหนดค่าให้ตัวแปร message
+// let discountButton = document.getElementById('discountButton'); // กำหนดค่าให้ตัวแปร discountButton
+// let message = document.getElementById('message'); // กำหนดค่าให้ตัวแปร message
 
-function showMessage() {
-    message.innerHTML = 'ว่างายยยย'; // แสดงผลลัพธ์ใน html
-}
+// function showMessage() {
+//     message.innerHTML = 'ว่างายยยย'; // แสดงผลลัพธ์ใน html
+// }
 
-// แสดงผลลัพธ์ใน html
-discountButton.addEventListener('click', showMessage); // เมื่อคลิกที่ปุ่ม discountButton ให้แสดงผลลัพธ์ใน html
+// // แสดงผลลัพธ์ใน html
+// discountButton.addEventListener('click', showMessage); // เมื่อคลิกที่ปุ่ม discountButton ให้แสดงผลลัพธ์ใน html
+
+
+//=====================================================================================================
+
+// โปรแกรมสูตรคูณ
+ let numberInput = document.getElementById('number-input');
+ let runButton = document.getElementById('run-button');
+ let output = document.getElementById('output');
+
+ function printMultiply() {
+    let number = Number(numberInput.value)
+    let outputHtml = '';
+
+    for (let i = 1; i <= 12; i++) {
+        outputHtml += '<p>';
+        outputHtml += number + ' x ' + i + ' = ' + (number * i);
+        outputHtml += '</p>'; 
+    }
+
+    output.innerHTML = outputHtml;
+
+    }
+
+    runButton.addEventListener('click', printMultiply);
